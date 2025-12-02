@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>IG 貼文排版神器 | Instagram 空行轉換器 (免安裝)</title>
+    <meta name="description" content="IG 發文總是文字擠在一起？這款免費線上工具能自動加入隱形空白符號，解決 Instagram 吃字問題。">
+
+    <meta property="og:image" content="images/preview.jpg">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> </head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+
+    <div class="flex-1 max-w-md mx-auto w-full p-4 flex flex-col">
+
+        <div class="mt-6 space-y-4">
+            <div class="bg-blue-50 border border-blue-100 rounded-lg p-4 text-xs text-blue-800 leading-5">
+                <p><strong>💡 秒懂原理：</strong>我們會在空行中插入「隱形符號」，讓 Instagram 認為那一行有字。</p>
+            </div>
+            <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100">
+                <img src="images/preview.jpg" alt="IG 貼文排版前後對比" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
+                <p class="text-center text-[10px] text-gray-400 mt-2">▲ 實際效果範例</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script> <script>
+        // PWA 註冊 (sw.js 保持在根目錄，所以路徑不變)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('PWA OK'))
+                    .catch(err => console.log('PWA Fail', err));
+            });
+        }
+    </script>
+</body>
+</html>
