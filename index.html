@@ -35,7 +35,8 @@
 
         <div class="mt-6 space-y-4">
             <div class="bg-blue-50 border border-blue-100 rounded-lg p-4 text-xs text-blue-800 leading-5">
-                <p><strong>💡 秒懂原理：</strong>我們會在空行中插入「隱形符號」，讓 Instagram 認為那一行有字。</p>
+                <p><strong>💡 秒懂原理：</strong><br>
+                    IG 最愛吃掉空行，我們幫你在裡面偷藏了<span class="font-bold text-red-500">「你看不到的字」</span>來騙過系統，這樣排版就安全啦！</p>
             </div>
             <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100">
                 <img src="images/preview.jpg" alt="IG 貼文排版前後對比" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
@@ -45,7 +46,7 @@
 
 
         <div class="bg-white rounded-xl shadow-sm border border-gray-100 flex-1 flex flex-col overflow-hidden relative min-h-[220px]">
-            <textarea id="input" class="flex-1 w-full p-4 resize-none focus:outline-none text-base leading-relaxed text-gray-800 placeholder-gray-300"
+            <textarea id="input" class="flex-1 w-full p-4 resize-none focus:outline-none text-base leading-relaxed text-gray-800 placeholder-gray-400 bg-blue-50"
             placeholder="在此輸入貼文...
 
 範例：
@@ -55,7 +56,7 @@
 
 轉換後 IG 就不會吃掉空行囉！"></textarea>
 
-            <div class="absolute bottom-2 right-4 text-xs text-gray-400 bg-white/90 px-2 py-1 rounded-md">
+            <div class="absolute bottom-2 right-4 text-xs text-gray-400 bg-white/90 px-2 py-1 rounded-md border border-gray-100">
                 <span id="count">0</span> 字
             </div>
         </div>
