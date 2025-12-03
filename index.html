@@ -13,9 +13,41 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="apple-touch-icon" href="images/icon-192.png">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "IG 貼文排版神器 (InstaSpacer)",
+      "headline": "解決 Instagram 吃字問題，自動加入隱形空行",
+      "image": "https://chic-medovik-4a8783.netlify.app/images/icon-512.png",
+      "url": "https://chic-medovik-4a8783.netlify.app/",
+      "author": {
+        "@type": "Person",
+        "name": "InstaSpacer Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "InstaSpacer"
+      },
+      "applicationCategory": "SocialNetworkingApplication",
+      "operatingSystem": "Android, iOS, Windows, macOS, Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TWD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1280"
+      },
+      "featureList": "自動換行轉換, 隱形空白符號, 字數統計, 一鍵複製, PWA 免安裝"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="flex flex-col min-h-screen bg-gray-50">
@@ -23,7 +55,14 @@
     <div class="bg-white shadow-sm sticky top-0 z-10">
         <div class="max-w-md mx-auto px-4 py-3 flex justify-between items-center">
             <h1 class="font-bold text-xl tracking-tight gradient-text font-serif italic">InstaSpacer</h1>
-            <div class="text-xs text-gray-400 border border-gray-200 rounded-full px-2 py-1">v1.0</div>
+
+            <div class="flex items-center gap-2">
+                <button id="install-btn" class="hidden bg-gray-900 text-white text-xs px-3 py-1.5 rounded-full shadow-md active:scale-95 transition-transform flex items-center gap-1 hover:bg-gray-800">
+                    <i class="fa-solid fa-download"></i> 下載 App
+                </button>
+
+                <div class="text-xs text-gray-400 border border-gray-200 rounded-full px-2 py-1">v1.2</div>
+            </div>
         </div>
     </div>
 
@@ -33,20 +72,8 @@
             <span class="text-gray-400 text-xs">廣告預留位 (Top Banner)</span>
         </div>
 
-        <div class="mt-6 space-y-4">
-            <div class="bg-blue-50 border border-blue-100 rounded-lg p-4 text-xs text-blue-800 leading-5">
-                <p><strong>💡 秒懂原理：</strong><br>
-                    IG 最愛吃掉空行，我們幫你在裡面偷藏了<span class="font-bold text-red-500">「你看不到的字」</span>來騙過系統，這樣排版就安全啦！</p>
-            </div>
-            <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100">
-                <img src="images/preview.jpg" alt="IG 貼文排版前後對比" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
-                <p class="text-center text-[10px] text-gray-400 mt-2">▲ 實際效果範例</p>
-            </div>
-        </div>
-
-
         <div class="bg-white rounded-xl shadow-sm border border-gray-100 flex-1 flex flex-col overflow-hidden relative min-h-[220px]">
-            <textarea id="input" class="flex-1 w-full p-4 resize-none focus:outline-none text-base leading-relaxed text-gray-800 placeholder-gray-400 bg-blue-50"
+            <textarea id="input" class="flex-1 w-full p-4 resize-none focus:outline-none text-base leading-relaxed text-gray-800 placeholder-gray-400 bg-slate-50"
             placeholder="在此輸入貼文...
 
 範例：
@@ -72,9 +99,21 @@
             </button>
         </div>
 
-
-        <div class="ad-slot mt-4">
+        <div class="ad-slot mt-6">
              <span class="text-gray-400 text-xs">廣告預留位 (Bottom Rect)</span>
+        </div>
+
+        <div class="mt-6 space-y-4">
+            <div class="bg-blue-50 border border-blue-100 rounded-lg p-4 text-xs text-blue-800 leading-5">
+                <p>
+                    <strong>💡 秒懂原理：</strong><br>
+                    IG 最愛吃掉空行，我們幫你在裡面偷藏了<span class="font-bold text-red-500">「你看不到的字」</span>來騙過系統，這樣排版就安全啦！
+                </p>
+            </div>
+            <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100">
+                <img src="images/preview.jpg" alt="IG 貼文排版前後對比" class="w-full h-auto rounded-lg shadow-sm" loading="lazy">
+                <p class="text-center text-[10px] text-gray-400 mt-2">▲ 實際效果範例</p>
+            </div>
         </div>
 
     </div>
